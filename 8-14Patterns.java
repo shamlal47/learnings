@@ -4,6 +4,7 @@ class Patterns {
         p.rev_Pyramid(5);
         p.diamond(5);
         p.ditriangle(5);
+        p.binaryTri(5);
     }
 
     public void rev_Pyramid(int n) {
@@ -67,6 +68,22 @@ class Patterns {
             System.out.println();
         }
 
+    }
+
+    public void binaryTri(int n) {
+        int flag;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) {
+                flag = 1;
+            } else {
+                flag = 0;
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print(flag);
+                flag = 1 - flag;
+            }
+            System.out.println();
+        }
     }
 
 }
