@@ -7,6 +7,7 @@ class Patterns {
         p.binaryTri(5);
         p.rampNumber(5);
         p.natural_tri(5);
+        p.abc_tri(5);
     }
 
     public void rev_Pyramid(int n) {
@@ -114,6 +115,16 @@ class Patterns {
             for (int j = 0; j < i; j++) {
                 System.out.print(count);
                 count++;
+            }
+            System.out.println();
+        }
+    }
+
+    public void abc_tri(int n) {
+
+        for (int i = 0; i < n; i++) {
+            for (char ch = 'A'; ch < 'A' + i; ch++) {
+                System.out.print(ch + " ");
             }
             System.out.println();
         }
