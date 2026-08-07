@@ -5,6 +5,7 @@ class Patterns {
         p.diamond(5);
         p.ditriangle(5);
         p.binaryTri(5);
+        p.rampNumber(5);
     }
 
     public void rev_Pyramid(int n) {
@@ -84,6 +85,26 @@ class Patterns {
             }
             System.out.println();
         }
+    }
+
+    public void rampNumber(int n) {
+
+        int space = 2 * (n - 1);
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (int j = 1; j < space; j++) {
+                System.out.print(" ");
+            }
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+            space = space - 2;
+        }
+
     }
 
 }
