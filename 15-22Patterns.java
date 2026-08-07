@@ -3,6 +3,7 @@ class Patterns {
         Patterns p = new Patterns();
         p.rev_abc_tri(5);
         p.abc_tri2(5);
+        p.abc_pyramid2(5);
     }
 
     void rev_abc_tri(int n) {
@@ -22,5 +23,31 @@ class Patterns {
             }
             System.out.println();
         }
+    }
+
+    void abc_pyramid2(int n) {
+        for (int i = 0; i < n; i++) {
+            int mid = (2 * i + 1) / 2;
+            char ch = 'A';
+
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= 2 * i + 1; j++) {
+                System.out.print(ch);
+                if (mid >= j) {
+                    ch++;
+                } else {
+                    ch--;
+                }
+            }
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            System.out.println();
+
+        }
+
     }
 }
