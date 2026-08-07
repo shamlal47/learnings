@@ -6,6 +6,7 @@ class Patterns {
         p.ditriangle(5);
         p.binaryTri(5);
         p.rampNumber(5);
+        p.natural_tri(5);
     }
 
     public void rev_Pyramid(int n) {
@@ -105,6 +106,17 @@ class Patterns {
             space = space - 2;
         }
 
+    }
+
+    public void natural_tri(int n) {
+        int count = 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(count);
+                count++;
+            }
+            System.out.println();
+        }
     }
 
 }
