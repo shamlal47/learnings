@@ -4,6 +4,7 @@ class Patterns {
         p.rev_abc_tri(5);
         p.abc_tri2(5);
         p.abc_pyramid2(5);
+        p.abc_rev(5);
     }
 
     void rev_abc_tri(int n) {
@@ -50,4 +51,14 @@ class Patterns {
         }
 
     }
+
+    void abc_rev(int n) {
+        for (int i = 0; i < n; i++) {
+            for (char ch = (char) ('A' + n - i - 1); ch < (char) ('A' + n); ch++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+
 }
