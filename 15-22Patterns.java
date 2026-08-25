@@ -7,6 +7,7 @@ class Patterns {
         p.abc_rev(5);
         p.diend_space(5);
         p.butterfly(5);
+        p.hollow_sqr(5);
     }
 
     void rev_abc_tri(int n) {
@@ -139,6 +140,21 @@ class Patterns {
 
             space = space + 2;
             System.out.println();
+        }
+    }
+
+    void hollow_sqr(int n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(j == 0 || i == 0 || j == n-1 || i == n-1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+                
+            }
+            System.out.println();
+
         }
     }
 
